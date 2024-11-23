@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ing. César Arturo Abreu y Asociados</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: red;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header img {
+            width: 150px;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-top: 1rem;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1200x600?text=Imagen+de+Arquitectura') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: none;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #444;
+        }
+
+        .services, .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            width: calc(50% - 1rem);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 2rem;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .contact p {
+            margin: 0.5rem 0;
+        }
+
+        footer {
+            text-align: center;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        #search-bar {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        #search-bar input {
+            padding: 0.5rem;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #search-bar button {
+            padding: 0.5rem;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #search-bar button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="C:\Users\romer\Downloads\log.jpeg" alt="Logo Ing. César Arturo Abreu y Asociados">
+        <h1>Ing. César Arturo Abreu y Asociados</h1>
+        <p>Innovación y Diseño para tu Futuro</p>
+    </header>
+    <nav>
+        <a href="#" onclick="showSection('services')">Servicios</a>
+        <a href="#" onclick="showSection('projects')">Proyectos</a>
+        <a href="#" onclick="showSection('contact')">Contacto</a>
+    </nav>
+    <div id="search-bar">
+        <input type="text" id="search-input" placeholder="Buscar...">
+        <button onclick="search()">Buscar</button>
+    </div>
+    <div id="services" class="container">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="services">
+            <div class="card">
+                <img src="https://via.placeholder.com/400x300?text=Diseño+Interiores" alt="Diseño de Interiores">
+                <h3>Diseño de Interiores</h3>
+                <p>Transformamos tus espacios en ambientes funcionales y modernos.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/400x300?text=Planificación+Urbana" alt="Planificación Urbana">
+                <h3>Planificación Urbana</h3>
+                <p>Proyectos que integran sostenibilidad y diseño innovador.</p>
+            </div>
+        </div>
+    </div>
+    <div id="projects" class="container">
+        <h2 class="section-title">Proyectos Recientes</h2>
+        <div class="projects">
+            <div class="card">
+                <img src="https://via.placeholder.com/400x300?text=Proyecto+1" alt="Proyecto 1">
+                <h3>Edificio Moderno XYZ</h3>
+                <p>Un diseño contemporáneo enfocado en la eficiencia energética.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/400x300?text=Proyecto+2" alt="Proyecto 2">
+                <h3>Casa Minimalista</h3>
+                <p>Un espacio diseñado para la comodidad y el estilo de vida actual.</p>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="container">
+        <h2 class="section-title">Contáctanos</h2>
+        <div class="contact">
+            <p><strong>Teléfono:</strong> +1 (809) 555-1234</p>
+            <p><strong>Email:</strong> info@cesararturoabreu.com</p>
+            <p><strong>Dirección:</strong> Calle Principal #123, La Vega, República Dominicana</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Ing. César Arturo Abreu y Asociados. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.container');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function search() {
+            const input = document.getElementById('search-input').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(input) ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
